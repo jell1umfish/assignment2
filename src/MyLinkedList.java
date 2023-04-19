@@ -84,6 +84,21 @@ public class MyLinkedList<T> implements MyList<T> {
         return nodeToRemove.element;
     }
 
+    public int size(){
+        return size;
+    }
+
+    public boolean contains(Object o) {
+        Node currentNode = head;
+        while (currentNode != null) {
+            if (currentNode==o) {
+                return true;
+            }
+            currentNode = currentNode.next;
+        }
+        return false;
+    }
+
     private boolean isEmpty() {
         return size == 0;
     }
